@@ -60,10 +60,9 @@ struct AppBarView: View {
     var body: some View {
         VStack {
             Button(action: {
-                //go to user's profile
                 
             }){
-                Image("user")
+                Image("1")
             }
             HStack {
                 Text("Location")

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserProfleView: View {
     
+    @Environment(\.presentationMode) var presentationMode
     @State private var userName = "Jordan B. Piterson"
     @State private var shouldShowImagePicker = false
     @State var image: UIImage!
@@ -19,18 +20,33 @@ struct UserProfleView: View {
                 Color.white
                     .ignoresSafeArea()
                     .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                if #available(iOS 16.0, *) {
+                                    Image(systemName: "arrow.left")
+                                        .foregroundColor(.black)
+                                        .fontWeight(.bold)
+                                } else {
+                                    // Fallback on earlier versions
+                                }
+                            }
+
+                        }
                         ToolbarItem(placement: .principal) {
                             Text("Profile")
                                 .font(.custom("Kanit-SemiBold", size: 20))
                                 .foregroundColor(Color.black)
                         }
                     }
-                VStack {
+                VStack{
+                    Spacer()
                     Button {
                         //change image
                         shouldShowImagePicker.toggle()
                     } label: {
-                        VStack {
+                        VStack(spacing: 10){
                             VStack {
                                 if let image = self.image {
                                     Image(uiImage: image)
@@ -55,7 +71,6 @@ struct UserProfleView: View {
                     .padding()
                     Text("\(userName)")
                         .font(.custom("Kanit-Medium", size: 23))
-                    
                     if #available(iOS 16.0, *) {
                         Button {
                             Text("Upload successfully")
@@ -78,39 +93,68 @@ struct UserProfleView: View {
                     }
                     List {
                         NavigationLink(destination: TradeStoreView()) {
-                            HStack {
-                                Image(systemName: "creditcard")
-                                Text("Trade store")
+                            if #available(iOS 16.0, *) {
+                                HStack {
+                                    Image(systemName: "creditcard")
+                                        .font(.system(size: 25))
+                                    Text("Trade store")
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                .padding(.vertical, 8)
+                                .contentShape(Rectangle())
+                                
+                            } else {
+                                // Fallback on earlier versions
                             }
                         }
                         
                         NavigationLink(destination: PaymentMethodView()) {
                             HStack {
                                 Image(systemName: "creditcard")
+                                    .font(.system(size: 25))
+
                                 Text("Payment method")
                             }
+                                           .buttonStyle(PlainButtonStyle())
+                                           .padding(.vertical, 8)
+                                           .contentShape(Rectangle())
                         }
                         
                         HStack {
                             Image(systemName: "creditcard")
+                                .font(.system(size: 25))
+
                             Text("Balance")
                             Spacer()
                             Text("$1556")
+                                .fontWeight(.medium)
                         }
+                                       .buttonStyle(PlainButtonStyle())
+                                       .padding(.vertical, 8)
+                                       .contentShape(Rectangle())
                         
                         NavigationLink(destination: TradeHistoryView()) {
                             HStack {
                                 Image(systemName: "creditcard")
+                                    .font(.system(size: 25))
+
                                 Text("Trade history")
                             }
+                                           .buttonStyle(PlainButtonStyle())
+                                           .padding(.vertical, 8)
+                                           .contentShape(Rectangle())
                         }
                         
                         NavigationLink(destination: RestorePurchaseView()) {
                             HStack {
-                                Image(systemName: "arrow.clockwise")
+                                Image(systemName: "arrow.triangle.2.circlepath")
+                                    .font(.system(size: 25))
                                 Text("Restore purchase")
                             }
-                            
+                                           .buttonStyle(PlainButtonStyle())
+                                           .padding(.vertical, 8)
+                                           .contentShape(Rectangle())
+                                           
                         }
                         
                         Button(action: {
@@ -118,22 +162,33 @@ struct UserProfleView: View {
                         }) {
                             HStack {
                                 Image(systemName: "questionmark.circle")
+                                    .font(.system(size: 30))
+
                                 Text("Help")
                             }
+                                           .buttonStyle(PlainButtonStyle())
+                                           .padding(.vertical, 8)
+                                           .contentShape(Rectangle())
                         }
                         
                         Button(action: {
-                            print("Log out button tapped")
+                            
                         }) {
-                            Text("Log out")
-                                
+                            HStack {
+                                Image(systemName: "rectangle.portrait.and.arrow.forward")
+                                Text("Log out")
+                            }
+                                           .buttonStyle(PlainButtonStyle())
+                                           .padding(.vertical, 8)
+                                           .contentShape(Rectangle())
                         }
+                        
                     }
                     .listStyle(.plain)
                     .font(.custom("Kanit-Light", size: 20))
                     .padding()
+                    
                 }
-                .navigationViewStyle(.stack)
                 .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
                     ImagePicker(image: $image)
                 }
@@ -164,34 +219,17 @@ struct UserProfleView: View {
                 .padding()
         }
     }
-    
     struct RestorePurchaseView: View {
         var body: some View {
-            Text("Restore purchase view")
-                .font(.title)
-                .padding()
+                Text("Nothing to restore yet")
+                    .font(.custom("Kanit-Medium", size: 30))
+                    .padding()
+            }
         }
     }
-}
+    
 struct UserProfleView_Previews: PreviewProvider {
     static var previews: some View {
         UserProfleView()
-    }
-}
-struct NavigationLinkArrowStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        if #available(iOS 16.0, *) {
-            content
-                .overlay(
-                    Image(systemName: "chevron.right")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .padding(.trailing, 4)
-                        .foregroundColor(.gray),
-                    alignment: .trailing
-                )
-        } else {
-            // Fallback on earlier versions
-        }
     }
 }
