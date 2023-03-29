@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-class AppViewModel: ObservableObject {
+class SigbUpViewModel: ObservableObject {
     
     let auth = Auth.auth()
     

@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 @main
-struct SwiftUITestProjectApp: App {
+struct Appdelegate: App {
     
     class AppDelegate: NSObject, UIApplicationDelegate {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -25,7 +25,7 @@ struct SwiftUITestProjectApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                let viewModel = AppViewModel()
+                let viewModel = SigbUpViewModel()
                 SignUp()
                     .environmentObject(viewModel)
             }

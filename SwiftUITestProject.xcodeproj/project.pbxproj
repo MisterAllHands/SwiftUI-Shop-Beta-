@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6BF3B1ECF9D095263054900E /* Pods_SwiftUITestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0369C60505A2EC627A4B31 /* Pods_SwiftUITestProject.framework */; };
-		ED86FC8529C1AB7B00261A2B /* AppVieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86FC8429C1AB7B00261A2B /* AppVieModel.swift */; };
+		ED846F0729D4F3AA00DAE33A /* PageOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED846F0629D4F3AA00DAE33A /* PageOneViewModel.swift */; };
+		ED86FC8529C1AB7B00261A2B /* SignUpVieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86FC8429C1AB7B00261A2B /* SignUpVieModel.swift */; };
 		ED86FC8D29C1C39E00261A2B /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86FC8C29C1C39E00261A2B /* LogInView.swift */; };
 		ED86FC8F29C1C58C00261A2B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86FC8E29C1C58C00261A2B /* SignUp.swift */; };
 		ED86FC9529C1D62200261A2B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED86FC9429C1D62200261A2B /* Montserrat-Regular.ttf */; };
 		ED9E480029C6C4B700FE3052 /* PageOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E47FF29C6C4B700FE3052 /* PageOneView.swift */; };
 		ED9E480429C6C4F300FE3052 /* UserProfleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E480329C6C4F300FE3052 /* UserProfleView.swift */; };
-		EDDF680D29BD8BA100F6D081 /* SwiftUITestProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF680C29BD8BA100F6D081 /* SwiftUITestProjectApp.swift */; };
+		EDDF680D29BD8BA100F6D081 /* Appdelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF680C29BD8BA100F6D081 /* Appdelegate.swift */; };
 		EDDF681129BD8BA300F6D081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDF681029BD8BA300F6D081 /* Assets.xcassets */; };
 		EDDF681429BD8BA300F6D081 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDF681329BD8BA300F6D081 /* Preview Assets.xcassets */; };
 		EDE09E8D29C9D5FB0079DDC1 /* APIStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE09E8C29C9D5FB0079DDC1 /* APIStructure.swift */; };
@@ -30,14 +31,15 @@
 		0D0369C60505A2EC627A4B31 /* Pods_SwiftUITestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUITestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7297FAB933ED92C602E466DB /* Pods-SwiftUITestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITestProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUITestProject/Pods-SwiftUITestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8654D625AE01AA8F72F232A6 /* Pods-SwiftUITestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITestProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftUITestProject/Pods-SwiftUITestProject.release.xcconfig"; sourceTree = "<group>"; };
-		ED86FC8429C1AB7B00261A2B /* AppVieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVieModel.swift; sourceTree = "<group>"; };
+		ED846F0629D4F3AA00DAE33A /* PageOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneViewModel.swift; sourceTree = "<group>"; };
+		ED86FC8429C1AB7B00261A2B /* SignUpVieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVieModel.swift; sourceTree = "<group>"; };
 		ED86FC8C29C1C39E00261A2B /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		ED86FC8E29C1C58C00261A2B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		ED86FC9429C1D62200261A2B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		ED9E47FF29C6C4B700FE3052 /* PageOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneView.swift; sourceTree = "<group>"; };
 		ED9E480329C6C4F300FE3052 /* UserProfleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfleView.swift; sourceTree = "<group>"; };
 		EDDF680929BD8BA100F6D081 /* SwiftUITestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDDF680C29BD8BA100F6D081 /* SwiftUITestProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestProjectApp.swift; sourceTree = "<group>"; };
+		EDDF680C29BD8BA100F6D081 /* Appdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdelegate.swift; sourceTree = "<group>"; };
 		EDDF681029BD8BA300F6D081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDDF681329BD8BA300F6D081 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDE09E8C29C9D5FB0079DDC1 /* APIStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStructure.swift; sourceTree = "<group>"; };
@@ -153,8 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				EDE09EA729CC8A240079DDC1 /* ImagePicker.swift */,
-				ED86FC8429C1AB7B00261A2B /* AppVieModel.swift */,
-				EDDF680C29BD8BA100F6D081 /* SwiftUITestProjectApp.swift */,
+				ED86FC8429C1AB7B00261A2B /* SignUpVieModel.swift */,
+				EDDF680C29BD8BA100F6D081 /* Appdelegate.swift */,
+				ED846F0629D4F3AA00DAE33A /* PageOneViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -279,13 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED86FC8529C1AB7B00261A2B /* AppVieModel.swift in Sources */,
+				ED86FC8529C1AB7B00261A2B /* SignUpVieModel.swift in Sources */,
 				ED9E480429C6C4F300FE3052 /* UserProfleView.swift in Sources */,
 				ED86FC8D29C1C39E00261A2B /* LogInView.swift in Sources */,
-				EDDF680D29BD8BA100F6D081 /* SwiftUITestProjectApp.swift in Sources */,
+				EDDF680D29BD8BA100F6D081 /* Appdelegate.swift in Sources */,
 				EDE09E8D29C9D5FB0079DDC1 /* APIStructure.swift in Sources */,
 				EDE09EA829CC8A240079DDC1 /* ImagePicker.swift in Sources */,
 				ED9E480029C6C4B700FE3052 /* PageOneView.swift in Sources */,
+				ED846F0729D4F3AA00DAE33A /* PageOneViewModel.swift in Sources */,
 				ED86FC8F29C1C58C00261A2B /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

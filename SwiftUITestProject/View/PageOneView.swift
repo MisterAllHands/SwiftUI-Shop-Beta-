@@ -60,6 +60,7 @@ struct AppBarView: View {
     var body: some View {
         VStack {
             Button(action: {
+                //Go to uesr profile
                 
             }){
                 Image("1")

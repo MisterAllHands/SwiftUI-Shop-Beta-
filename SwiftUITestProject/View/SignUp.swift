@@ -8,7 +8,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct SignUp: View {
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var viewModel: SigbUpViewModel
     @State private var shouldOpenFirstPage = false
     
     var body: some View {
@@ -34,12 +34,12 @@ struct SignUp: View {
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
         SignUp()
-            .environmentObject(AppViewModel())
+            .environmentObject(SigbUpViewModel())
     }
 }
 
 struct SignInView: View {
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var viewModel: SigbUpViewModel
     @State private var isPresentingLogin = false
     @State private var firstName = ""
     @State private var email = ""

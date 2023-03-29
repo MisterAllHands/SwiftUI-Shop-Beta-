@@ -13,7 +13,7 @@ import FirebaseAuth
 struct LoginView: View {
 
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var viewModel: SigbUpViewModel
 
     @State private var email: String = ""
     @State private var password: String = ""
@@ -100,6 +100,6 @@ struct LoginView: View {
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .environmentObject(AppViewModel())
+            .environmentObject(SigbUpViewModel())
     }
 }
